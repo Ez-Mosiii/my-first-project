@@ -2,14 +2,18 @@ import ClipPathTitle from "../components/ClipPathTitle";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import VideoPinSection from "../components/VideoPinSection";
+import { useMediaQuery } from "react-responsive";
+
 const Benefit = () => {
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
   useGSAP(() => {
     const revealTl = gsap.timeline({
-      delay: 1,
+      delay: isMobile ? 0 : 1,
       scrollTrigger: {
         trigger: ".benefit-section",
-        start: "top 60%",
-        end: "top top",
+        start: isMobile ? "top 80%" : "top 60%",
+        end: isMobile ? "30% top" : "top top",
         scrub: 1.5,
       },
     });

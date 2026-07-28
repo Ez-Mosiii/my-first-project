@@ -13,13 +13,17 @@ import Footer from "./sections/Footer";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 const App = () => {
+  const isMobile = window.matchMedia("(max-width: 768px)").matches;
+
   useGSAP(() => {
-    ScrollSmoother.create({
-      smooth: 3,
-      effects: true,
-      wrapper: "#smooth-wrapper",
-      content: "#smooth-content",
-    });
+    if (!isMobile) {
+      ScrollSmoother.create({
+        smooth: 3,
+        effects: true,
+        wrapper: "#smooth-wrapper",
+        content: "#smooth-content",
+      });
+    }
   });
   return (
     <main>

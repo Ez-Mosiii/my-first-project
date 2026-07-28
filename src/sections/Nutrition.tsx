@@ -21,17 +21,20 @@ const Nutrition = () => {
       linesClass: "paragraph-line",
     });
     const contentTl = gsap.timeline({
-      scrollTrigger: { trigger: ".nutrition-section", start: "top center" },
+      scrollTrigger: {
+        trigger: ".nutrition-section",
+        start: isMobile ? "top 80%" : "top center",
+      },
     });
     contentTl
       .from(titleSplit.chars, {
-        yPercent: 100,
+        yPercent: isMobile ? 60 : 100,
         stagger: 0.02,
         ease: "power2.out",
       })
       .from(paragraphSplit.lines, {
-        yPercent: 300,
-        rotate: 3,
+        yPercent: isMobile ? 100 : 300,
+        rotate: isMobile ? 1 : 3,
         duration: 1,
         stagger: 0.01,
         ease: "power1.inOut",
@@ -40,7 +43,7 @@ const Nutrition = () => {
     const titleTl = gsap.timeline({
       scrollTrigger: {
         trigger: ".nutrition-section",
-        start: "top 80%",
+        start: isMobile ? "top 90%" : "top 80%",
       },
     });
 

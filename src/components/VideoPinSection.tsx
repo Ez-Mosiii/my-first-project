@@ -40,12 +40,12 @@ const VideoPinSection = () => {
           autoPlay
         ></video>
         <div className="abs-center md:scale-100 scale-200 ">
-          <img src="/images/circle-text.svg" className="spin-circle" />
-          <div className="play-btn">
+          <img src="/images/circle-text.svg" className="spin-circle md:size-[15vw] size-28" />
+          <div className="play-btn md:size-[9vw] size-16">
             <img
               src="/images/play.svg"
               alt=""
-              className="size-[3vw] ml-[.5vw]"
+              className="md:size-[3vw] size-5 ml-[.5vw]"
             />
           </div>
         </div>
