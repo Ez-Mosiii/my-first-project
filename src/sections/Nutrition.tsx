@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useMemo } from "react";
 import { nutrientLists } from "../constants";
-import MediaQuery, { useMediaQuery } from "react-responsive";
+import { useMediaQuery } from "react-responsive";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/SplitText";
 import gsap from "gsap";
@@ -9,14 +9,10 @@ gsap.registerPlugin(SplitText);
 
 const Nutrition = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
-  const [lists, setLists] = useState(nutrientLists);
-  useEffect(() => {
-    if (isMobile) {
-      setLists(nutrientLists.slice(0, 3));
-    } else {
-      setLists(nutrientLists);
-    }
-  }, [isMobile]);
+  const lists = useMemo(
+    () => (isMobile ? nutrientLists.slice(0, 3) : nutrientLists),
+    [isMobile],
+  );
 
   useGSAP(() => {
     const titleSplit = SplitText.create(".nutrition-title", { type: "chars" });

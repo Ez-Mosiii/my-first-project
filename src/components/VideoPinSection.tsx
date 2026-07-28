@@ -33,17 +33,17 @@ const VideoPinSection = () => {
         }}
       >
         <video
-          src="\videos\pin-video.mp4"
+          src="/videos/pin-video.mp4"
           playsInline
           loop
           muted
           autoPlay
         ></video>
         <div className="abs-center md:scale-100 scale-200 ">
-          <img src="\images\circle-text.svg" className="spin-circle" />
+          <img src="/images/circle-text.svg" className="spin-circle" />
           <div className="play-btn">
             <img
-              src="\images\play.svg"
+              src="/images/play.svg"
               alt=""
               className="size-[3vw] ml-[.5vw]"
             />

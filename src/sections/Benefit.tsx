@@ -2,7 +2,7 @@ import ClipPathTitle from "../components/ClipPathTitle";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import VideoPinSection from "../components/VideoPinSection";
-const benefit = () => {
+const Benefit = () => {
   useGSAP(() => {
     const revealTl = gsap.timeline({
       delay: 1,
@@ -90,4 +90,4 @@ const benefit = () => {
   );
 };
 
-export default benefit;
+export default Benefit;

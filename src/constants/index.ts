@@ -50,7 +50,7 @@ const flavorlists: Flavor[] = [
   },
 ];
 
-const nutrientLists = [
+const nutrientLists: Nutrient[] = [
   { label: "Potassium", amount: "245mg" },
   { label: "Calcium", amount: "500mg" },
   { label: "Vitamin A", amount: "176mcg" },
@@ -58,7 +58,7 @@ const nutrientLists = [
   { label: "Iron", amount: "1mg" },
 ];
 
-const cards = [
+const cards: Card[] = [
   {
     src: "/videos/f1.mp4",
     rotation: "rotate-z-[-10deg]",

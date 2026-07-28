@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <section className="footer-section">
       <img
-        src="\images\footer-dip.png"
+        src="/images/footer-dip.png"
         className="object-cover w-full -translate-y-1"
       />
       <div className="2xl:h-[110dvh] relative md:pt-[20vh] pt-[10vh]   ">
@@ -21,7 +21,7 @@ const Footer = () => {
           />
         ) : (
           <video
-            src="\videos\splash.mp4"
+            src="/videos/splash.mp4"
             autoPlay
             playsInline
             muted
@@ -31,13 +31,13 @@ const Footer = () => {
 
         <div className="flex-center gap-5 relative z-10 md:mt-20 mt-5">
           <div className="social-btn">
-            <img src="./images/yt.svg" alt="" />
+            <img src="/images/yt.svg" alt="" />
           </div>
           <div className="social-btn">
-            <img src="./images/insta.svg" alt="" />
+            <img src="/images/insta.svg" alt="" />
           </div>
           <div className="social-btn">
-            <img src="./images/tiktok.svg" alt="" />
+            <img src="/images/tiktok.svg" alt="" />
           </div>
         </div>
         <div className="mt-40 md:px-10 px-5 flex md:flex-row flex-col gap-10 justify-between text-milk font-paragraph md:text-lg font-medium">
